@@ -109,7 +109,7 @@
   - Further action must be taken / redirect.
 - **4xx: Client Error**
   - Request doesn't have what it needs.
-- **5xx: Redirect**
+- **5xx: Server Error**
   - Server failed to fulfill an apparent valid request.
 ---
 - **Common Status Codes:**
