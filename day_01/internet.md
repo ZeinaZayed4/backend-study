@@ -171,7 +171,6 @@
 ## [How the Web Works](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
 
 
-
 ## [TCP/IP Model](https://www.youtube.com/watch?v=OTwp3xtd4dg)
 
 ### What's TCP/IP Model
