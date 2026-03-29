@@ -169,3 +169,61 @@
 - The browser makes a connection to the ip address requesting the web page for _www.google.com_
 
 ## [How the Web Works](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+
+
+
+## [TCP/IP Model](https://www.youtube.com/watch?v=OTwp3xtd4dg)
+
+### What's TCP/IP Model
+
+- A model designed to standardize computer networking.
+- Numbered from the bottom up, but the direction depends on if you're sending or receiving traffic.
+
+  |   | Original Mode |   |  New Model  |   |   OSI Model  |
+  |:-:|:-------------:|:-:|:-----------:|:-:|:------------:|
+  | 4 |  Application  | 5 | Application | 7 |  Application |
+  |   |               |   |             | 6 | Presentation |
+  |   |               |   |             | 5 |    Session   |
+  | 3 |    Transport  | 4 |  Transport  | 4 | 
+  | 2 |    Internet   | 3 |   Network   | 3 |
+  | 1 |      Link     | 2 |  Data Link  | 2 |
+  |   |               | 1 |   Physical  | 1 |
+
+- **Application protocols:** HTTP, FTP, SMTP.
+- **Transport protocols:** 
+  - TCP, UDP.
+  - Port numbers are also added here.
+- **Network layer:** IP, Routers.
+- **Date link layer:** contains ethernet, switches.
+- **Physical layer:** every thing we can touch and feel, like: cables and network interface cards _NIC_.
+
+### Sending and Receiving Data:
+
+- **Encapsulation**: when we send data, each layer will add its own bit of information.
+- When we reach the physical layer, the data is transmitted over the receiving device.
+- The receiving device starts to **decapsulate** the data.
+- We start with our app data at layer 5 _application layer_.
+- Then passed down to the next layer where the _transport_ info is added
+  - Ex: a TCP header is added, each time it's added, this will contain specific info, like:
+    - source and destination port number,
+    - sequence numbers,
+    - and more.
+- We then move to the network layer where we add the _IP_ header, this will contain the source and destination IP address and other more bits of info.
+- Lastly, we have the data link layer where we don't only add a header but a trailer as well.
+  - The header contains mainly the source and destination MAC address.
+  - The trailer contains some error checking info that the receiving side can check and make sure the data has been received correctly.
+
+  |          |    |     |      |          |   | Data Name |
+  |:--------:|:--:|:---:|:----:|:--------:|:-:|:---------:|
+  |          |    |     | Data |          | 5 |           |
+  |          |    | TCP | Data |          | 4 |  Segment  |
+  |          | IP | TCP | Data |          | 3 |   Packet  |
+  | Ethernet | IP | TCP | Data | Ethernet | 2 |    Frame  |
+
+- Once data has been transmitted, the receiving computer _decapsulate_ the info.
+- It will check the destination MAC address for that frame and if the frame is destined for our computer, it's processed further.
+- The computer then checks the IP info of the packets again if the packet is destined for our computer it's processed further.
+- The transport information is read and the app data is sent to the receiving app.
+  
+
+## [TCP vs UDP Comparison](https://www.youtube.com/watch?v=uwoD5YsGACg)
