@@ -226,3 +226,16 @@
   
 
 ## [TCP vs UDP Comparison](https://www.youtube.com/watch?v=uwoD5YsGACg)
+
+### TCP
+
+- Transmission Control Protocol.
+- TCP is used to ensure that connection between two devices is good and reliable, and data is received correctly without any loss.
+- It's a connection oriented protocol, it must first acknowledge a session between the two devices communicating.
+- A device sends a message **SYN**, the receiving device sends back a **SYN ACK** telling the sender it has received the message, then the sender sends **ACK Received**, the data then can be delivered.
+
+### UDP
+
+- User Datagram Protocol.
+- A _connectionless_ oriented protocol, it doesn't establish a session, and doesn't ensure data delivery.
+- It's faster than UDP.
