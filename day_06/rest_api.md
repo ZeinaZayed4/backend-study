@@ -38,3 +38,5 @@
 - **PATCH**
   - It updates only specific fields.
   - Not always idempotent.
+
+## [Postman Beginner's Course - API Testing](https://youtu.be/VywxIQ2ZXw4?si=zy-Mi3944P-6dOnP)
