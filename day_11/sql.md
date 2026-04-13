@@ -1,4 +1,4 @@
-# SQL
+# Database
 
 ## What is a Database (DB)?
 
@@ -79,3 +79,35 @@
     - stores the primary key of a row in another table.
 - **Composite Key:**
     - a primary key that needs two or more attributes to uniquely identify each row.
+
+## Structured Query Language (SQL)
+
+- SQL is a language used for interaction with RDBMS.
+    - You can use SQL to get the RDBMS to do things for you.
+        - Create, retrieve, update, and delete data.
+        - Create and manage databases.
+        - Design and create database tables.
+        - Perform administration tasks(security, user management, import/export, etc).
+- SQL implementations vary between systems.
+    - Not all RDBMS' follow the SQL standard to a 'T'.
+    - The concepts are the same but the implementation may vary.
+- SQL is a hybrid language, it's basically 4 types of languages in one.
+    - **Data Query Language (DQL)**
+        - Used to query the database for information.
+        - Get information that is already stored there.
+    - **Data Definition Language (DDL)**
+        - Used for defining database schemas.
+    - **Data Control Language (DCL)**
+        - Used for controlling access to the data in the DB.
+        - User and permissions management.
+    - **Data Manipulation Language (DML)**
+        - Used for inserting, updating, and deleting data from the DB.
+
+## Basic Data Types
+
+- INT: whole numbers.
+- DECIMAL(M, N): decimal numbers, exact value.
+- VARCHAR(L): string of text of length L. 
+- BLOB: binary large object, stores large data.
+- DATE: 'YYYY-MM-DD'
+- TIMESTAMP: 'YYYY-MM-DD HH:MM::SS'
