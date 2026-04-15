@@ -163,3 +163,89 @@
         1. Create a static array with initial capacity.
         2. Add elements to the underlying static array, keeping track of the number of elements.
         3. If adding another element will exceed the capacity, then create a new static array with twice the capacity and copy the original elements into it.
+
+## Singly and Doubly Linked Lists
+
+### What is a Linked List?
+
+- is a sequential list of nodes that hold data which point to other nodes also containing data.
+
+### Where are Linked Lists used?
+
+- Used in many List, Queue and Stack implementations.
+- Great for creating circular lists.
+- Can easily model real world objects such as trains.
+- Used in separate chaining, which is present certain HashTable implementations to deal with hashing collisions.
+- Often used in the implementation of adjacency lists for graphs.
+
+### Terminology
+
+- **Head:** the first node in a linked list.
+- **Tail:** the last node in a linked list.
+- **Pointer:** reference to another node.
+- **Node:** an object containing data and pointer(s).
+
+### Singly vs Doubly Linked Lists
+
+- Singly linked lists only hold a reference to the "next" node.
+- In doubly linked lists, each node holds a reference to the "next" and previous "node".
+- || Pros | Cons |
+  |---|---|---|
+  | Singly Linked | Uses less memory | Cannot easily access previous elements. |
+  || Simpler implementation ||
+  | Doubly Linked | Can be traversed backwards | Takes 2x memory |
+
+#### Inserting Singly Linked List
+
+- Insert 11 where the third node is.
+    - `5 --> 23 --> 7 --> 13`
+    1. Create new pointer which points to the head "5".
+    2. Move the new pointer to the second node "23".
+    3. Create the new node "11", make its next pointer points to "7".
+    4. Make "23" next pointer point to "11".
+    - `5 --> 23 --> 11 --> 7 --> 13`
+
+#### Inserting Doubly Linked List
+
+- Insert 11 where the third node is.
+    - `5 <--> 23 <--> 7 <--> 13`
+    1. Create new pointer which points to the head "5".
+    2. Move the new pointer to the second node "23".
+    3. Create the new node "11", make its next pointer points to "7". and its previous pointer points to "23".
+    4. Make "7" previous pointer point to "11".
+    5. Make "23" next pointer point to "11".
+    - `5 <--> 23 <--> 11 <--> 7 <--> 13`
+
+#### Removing from Singly Linked List
+
+- Remove 9 from the following SLL
+    - `7 --> 0 --> 4 --> 9 --> 15`
+    1. Create 2 pointers, trav1 points to the head "7", trav2 points to "0".
+    2. Move the pointers until trav2 points to "9", and trav1 to the previous one.
+    3. Create a new pointer "temp" which points to "9".
+    4. Move trav2 to the next node of "9".
+    5. Set trav1 next pointer to equal to trav2.
+    6. Remove temp pointer.
+    - `7 --> 0 --> 4 --> 15`
+
+#### Removing from Doubly Linked List
+
+- Remove 9 from the following DLL
+    - `7 <--> 0 <--> 4 <--> 9 <--> 15`
+    1. Create new pointer, trav points to the head "7".
+    2. Move trav pointer to "9".
+    5. Set "4" next pointer to equal to "15".
+    6. Set "15" previous pointer to equal "4".
+    6. Remove trav.
+    - `7 <--> 0 <--> 4 <--> 15`
+
+### Complexity
+-
+    || Singly Linked | Doubly Linked |
+    |---|---|---|
+    | Search | O(n) | O(n) |
+    | Insert at head | O(1) | O(1) |
+    | Insert at tail | O(1) | O(1) |
+    | Remove at head | O(1) | O(1) |
+    | Remove at tail | O(n) | O(1) |
+    | Remove in middle | O(n) | O(n) |
