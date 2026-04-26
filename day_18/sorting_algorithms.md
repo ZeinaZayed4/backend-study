@@ -48,10 +48,9 @@
 - Max no.of swaps = n(n - 1)/2 = O(n<sup>2</sup>)
 - **Bubble sort is adaptive(if optimized) and stable.**
 - Bubble sort time:
-    |   |   |
+    | Min | Max |
     |---|---|
-    | Min | O(n) |
-    | Max | O(n<sup>2</sup>) |
+    | O(n) | O(n<sup>2</sup>) |
 
 ## Selection Sort
 
@@ -74,10 +73,9 @@
 - Inserting an element into a sorted array in a sorted position.
 - Insertion sort is stable.
 - Insertion sort time:
-    |   |   |
+    | Min  | Max |
     |---|---|
-    | Min | O(n) |
-    | Max | O(n<sup>2</sup>) |
+    | O(n) | O(n<sup>2</sup>) |
 - Ex: `a = [2, 6, 10, 15, 20, 25, 30]`, insert 12
     | 2 | 6 | 10 | 15 | 20 | 25 | 30 |    |
     |---|---|----|----|----|----|----|----|
@@ -87,3 +85,23 @@
     | 2 | 6 | 10 |    | 15 | 20 | 25 | 30 |
     | 2 | 6 | 10 | 12 | 15 | 20 | 25 | 30 |
 - Result: `a = [2, 6, 10, 12, 15, 20, 25, 30]`
+
+## Merge Sort
+
+- Divide and conquer.
+- Recursively divide the array into halves until sub-arrays of size 1, then merge them in sorted order.
+- Merge sort time: **O(nlogn)**
+- Merge sort is stable.
+
+## Quick Sort
+
+- Divide and conquer.
+- Choose a pivot.
+- Partition array into:
+    - elements < pivot
+    - elements > pivot
+- Recursively sort partitions.
+- Quick sort time:
+    | Min | Max |
+    |---|---|
+    | O(nlogn) | O(n<sup>2</sup>) |
